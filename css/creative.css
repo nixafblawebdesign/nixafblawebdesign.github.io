@@ -416,7 +416,7 @@ body {
 }
 
 @media (max-width: 767px) {
-    header{
+    .headerclass{
       height: 100% !important; 
     }
     
