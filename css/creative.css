@@ -424,5 +424,7 @@ body {
       display: inline-block !important;
       vertical-align: middle !important;
       float: none !important;
+      top: 40% !important;
+      padding: 0;
     }
 }
