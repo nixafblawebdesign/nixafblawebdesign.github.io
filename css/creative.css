@@ -414,17 +414,3 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
-
-@media (max-width: 767px) {
-    .headerclass{
-      height: 100% !important; 
-    }
-    
-    .header-content{
-      display: inline-block !important;
-      vertical-align: middle !important;
-      float: none !important;
-      top: 40% !important;
-      padding: 0;
-    }
-}
