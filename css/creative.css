@@ -158,12 +158,17 @@ header {
   background-image: url('../img/header.jpg');
   text-align: center;
   color: white;
+  height: 100%;
 }
-header .header-content {
-  position: relative;
+header .header-content{
   text-align: center;
-  padding: 100px 15px 100px;
   width: 100%;
+  width: auto;
+  position: absolute;
+  top: 30%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
 }
 header .header-content .header-content-inner h1 {
   font-weight: 700;
@@ -414,3 +419,23 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+
+@media (max-width: 767px) {
+    .header_fulltext {
+       display: none;
+    }
+    .header_halftext {
+       display: block;
+    }
+}
+
+@media (min-width: 768px) {
+   .header_fulltext {
+      display: block;
+   }
+   .header_halftext {
+      display: none;
+   }
+}
+
+
