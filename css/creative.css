@@ -486,3 +486,6 @@ body {
   margin: 0px;
 }
 /*End Packages CSS*/
+i.fa.fa-facebook-square, i.fa.fa-twitter, i.fa.fa-instagram {
+    margin: 5px;
+}
