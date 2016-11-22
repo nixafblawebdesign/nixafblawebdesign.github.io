@@ -77,7 +77,7 @@
                 <h3 class="header_halftext">Nixa Missouri</h3>
                 <h2></h2>
                 <!-- <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">Learn More</a>
+                <a href="#plans" id="scrolldown" class="btn btn-primary btn-xl page-scroll">Learn More</a>
             </div>
         </div>
     </header>
@@ -178,6 +178,14 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        setTimeout(function() {
+          $("#scrolldown").trigger('click');
+        }, scrolldown);
+      });
+    </script>
 
 </body>
 
