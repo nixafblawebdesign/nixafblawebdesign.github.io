@@ -77,14 +77,14 @@
                 <h3 class="header_halftext">Nixa Missouri</h3>
                 <h2></h2>
                 <!-- <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">Learn More</a>
+                <a href="#scrolldownbox" id="scrolldown" class="btn btn-primary btn-xl page-scroll">Learn More</a>
             </div>
         </div>
     </header>
-    
-    <section class="no-padding" id="portfolio">
+
+    <section class="no-padding" id="scrolldownbox">
         <div class="container-fluid">
-            <div class="row no-gutter">
+            <div class="row no-gutter bg-primary">
                 <div class="col-lg-12 text-center bg-primary">
                     <hr class="light">
                     <h2 class="section-heading">What We Offer</h2>
@@ -208,6 +208,14 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        setTimeout(function() {
+          $("#scrolldown").trigger('click');
+        }, 1000);
+      });
+    </script>
 
 </body>
 

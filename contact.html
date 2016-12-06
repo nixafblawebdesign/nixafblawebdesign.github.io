@@ -77,28 +77,28 @@
                 <h3 class="header_halftext">Nixa Missouri</h3>
                 <h2></h2>
                 <!-- <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p> -->
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll">Learn More</a>
+                <a href="#scrolldownbox" id="scrolldown" class="btn btn-primary btn-xl page-scroll">Learn More</a>
             </div>
         </div>
     </header>
 
-    
-    <section class="no-padding" id="portfolio">
+
+    <section class="no-padding" id="scrolldownbox">
          <div class="container">
             <!-- Content Row -->
-            
+
             <div class="box">
-            
+
             <div class="row">
             <div class="col-lg-12">
                         <hr>
                         <h2 class="intro-text text-center">
-                        <strong>contact</strong>
+                        <strong>Contact</strong>
                         </h2>
                         <hr>
                     </div>
                     </div>
-            
+
             <div class="row">
                 <!-- Map Column -->
                 <div class="col-md-8">
@@ -124,7 +124,7 @@
                 <!-- Contact Form -->
                 <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <h3>Send us a Message</h3>
                         <form name="sentMessage" id="contactForm" novalidate>
                             <div class="control-group form-group">
@@ -158,17 +158,20 @@
                             <h3></h3>
                         </form>
                     </div>
-                    
+
+                    <!--
                     <div class="col-md-4">
-                    
+
                     <img class="img-responsive w100 emailimg" src="img/email.jpg">
-                    
+
                     </div>
-                    
+                    -->
+
                 </div>
                 <!-- /.row -->
             </div>
             <!-- /.container -->
+        </div>
     </section>
 
     <aside class="bg-dark">
@@ -193,6 +196,14 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        setTimeout(function() {
+          $("#scrolldown").trigger('click');
+        }, 500);
+      });
+    </script>
 
 </body>
 
