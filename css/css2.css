@@ -1,0 +1,8 @@
+header .header-content .header-content-inner h1 {
+	font-size: 3em !important;
+}
+
+.headerclass{
+	min-height: 50%;
+	height: auto;
+}
