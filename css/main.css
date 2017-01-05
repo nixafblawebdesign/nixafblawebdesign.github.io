@@ -6,6 +6,10 @@ a.link.special {
     color: white;
     text-decoration: none;
 }
+.text-center{
+    margin-left:10px;
+    margin-right:10px;
+}
 
 /*Make heights the same*/
 @media only screen and (min-width : 767px) {
