@@ -1,2 +1,3 @@
 *.save
 *.AppleDouble
+.DS_Store
