@@ -427,6 +427,7 @@ body {
     }
     .header_halftext {
        display: block;
+       line-height: 80%;
     }
 }
 

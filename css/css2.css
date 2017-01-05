@@ -1,8 +1,8 @@
 header .header-content .header-content-inner h1 {
-	font-size: 3em !important;
+	font-size: 2em !important;
 }
 
 .headerclass{
-	min-height: 50%;
+	min-height: 55%;
 	height: auto;
 }
