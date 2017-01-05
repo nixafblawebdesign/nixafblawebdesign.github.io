@@ -25,7 +25,7 @@
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
 
-    <!-- Custom Css for pages other than home -->                                                                                               
+    <!-- Custom Css for pages other than home -->
     <link href="css/css2.css" rel="stylesheet">
     <!--Custom CSS for all pages-->
     <link href="css/main.css" rel="stylesheet">
@@ -91,8 +91,8 @@
             <div class="row">
 
                 <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-danger panel-pricing">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <div class="panel panel-danger panel-pricing sameHeight">
                         <div class="panel-heading">
                             <i class="fa fa-desktop"></i>
                             <h3>Couple's Package</h3>
@@ -113,8 +113,8 @@
                 <!-- /item -->
 
                 <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-warning panel-pricing">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <div class="panel panel-warning panel-pricing sameHeight">
                         <div class="panel-heading">
                             <i class="fa fa-desktop"></i>
                             <h3>Family Package</h3>
@@ -135,8 +135,8 @@
                 <!-- /item -->
 
                 <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-success panel-pricing">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <div class="panel panel-success panel-pricing sameHeight">
                         <div class="panel-heading">
                             <i class="fa fa-desktop"></i>
                             <h3>Ultimate Family Package</h3>
@@ -156,12 +156,9 @@
                 </div>
                 <!-- /item -->
 
-            </div>
-            <div class="row">
-
                 <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-danger panel-pricing">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <div class="panel panel-danger panel-pricing sameHeight">
                         <div class="panel-heading">
                             <i class="fa fa-desktop"></i>
                             <h3>Incredible Party Package</h3>
@@ -182,8 +179,8 @@
                 <!-- /item -->
 
                 <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-warning panel-pricing">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <div class="panel panel-warning panel-pricing sameHeight">
                         <div class="panel-heading">
                             <i class="fa fa-desktop"></i>
                             <h3>Ultimate Party Package</h3>
@@ -204,8 +201,8 @@
                 <!-- /item -->
 
                 <!-- item -->
-                <div class="col-md-4 text-center">
-                    <div class="panel panel-success panel-pricing">
+                <div class="col-sm-6 col-md-4 col-lg-2 text-center">
+                    <div class="panel panel-success panel-pricing sameHeight">
                         <div class="panel-heading">
                             <i class="fa fa-desktop"></i>
                             <h3>The Mega Party Package</h3>
@@ -251,6 +248,15 @@
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
+    <!-- Load the matchHeight javascript library -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>
+      $(function() {
+        $('.panel-heading').matchHeight();
+        $('.list-group').matchHeight();
+      });
+    </script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
@@ -261,14 +267,6 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-        setTimeout(function() {
-          $("#scrolldown").trigger('click');
-        }, scrolldown);
-      });
-    </script>
 
 </body>
 
