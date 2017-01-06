@@ -420,7 +420,7 @@ body {
   webkit-tap-highlight-color: #222222;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation:portrait){
     .header_fulltext {
        display: none;
     }
@@ -428,6 +428,18 @@ body {
        display: block;
        line-height: 80%;
     }
+}
+
+@media (max-width: 767px) and (orientation:landscape) {
+  .header_halftext {
+     display: none !important;
+  }
+  .header_fulltext {
+     display: none !important;
+  }
+  header .header-content .header-content-inner h1 {
+    padding-top: 8% !important;
+  }
 }
 
 @media (min-width: 768px) {
