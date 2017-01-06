@@ -190,20 +190,20 @@
                         <form name="sentMessage" id="contactForm" novalidate>
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Full Name:</label>
+                                    <h3>Full Name:</h3>
                                     <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your full name.">
                                     <p class="help-block"></p>
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Phone Number:</label>
+                                    <h3>Phone Number:</h3>
                                     <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
                                 </div>
                             </div>
                             <div class="control-group form-group">
                                 <div class="controls">
-                                    <label>Email Address:</label>
+                                    <h3>Email Address:</h3>
                                     <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
                                 </div>
                             </div>
@@ -211,7 +211,7 @@
                             
                             <div id="success"></div>
                             <!-- For success/fail messages -->
-                            <button type="submit" class="btn btn-primary">Reserve your party!</button>
+                            
                             <h3></h3>
                         </form>
                     </div>
@@ -227,9 +227,10 @@
     
     <div class="col-md-6">
        
-            <h2>Select Date</h2>
-            <hr/>
-            <div class="date-picker"  data-date="2014-02-03">
+            <h2>Pick a Date and Time!</h2>
+            <hr>
+            
+            <div class="date-picker"  data-date="2017-01-01">
                 <div class="date-container">
                     <h3 class="date">
                         <span data-toggle="datepicker" data-method="subtract" data-type="d" class="fa fa-angle-left"></span>
@@ -243,18 +244,21 @@
                     </h2>
                 </div>
             </div>
+            <hr>
             
-            <div class="row">
+            <div class="row" style="padding-top: 8px;">
                 <div class="form-group timeform">
-                                
-    <input id="input-a" class="form-control" value="" data-default="01:43" data-placement="top">
-    
+                    
+    <div class="col-sm-5"><input id="input-a" class="form-control" value="" data-default="01:43" data-placement="top"></div>
+    <div class="col-sm-2"><h4 style="text-align: center;">to</h4></div>
+    <div class="col-sm-5"><input id="input-c" class="form-control" value="" data-default="01:43" data-placement="top"></div>
     </div>
 </div>
 
         </div>
         
     </div>
+    <p style="text-align: center;"><button type="submit" class="btn btn-warning btn-lg">Reserve your party!</button></p>
 </div>
   </section>
 
@@ -325,6 +329,29 @@
     <script type="text/javascript">
         $(document).ready(function(){
           var input = $('#input-a');
+input.clockpicker({
+    autoclose: true
+});
+
+// Manual operations
+$('#button-a').click(function(e){
+    // Have to stop propagation here
+    e.stopPropagation();
+    input.clockpicker('show')
+            .clockpicker('toggleView', 'minutes');
+});
+$('#button-b').click(function(e){
+    // Have to stop propagation here
+    e.stopPropagation();
+    input.clockpicker('show')
+            .clockpicker('toggleView', 'hours');
+});
+        });
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+          var input = $('#input-c');
 input.clockpicker({
     autoclose: true
 });
