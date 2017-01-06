@@ -440,6 +440,9 @@ body {
   header .header-content .header-content-inner h1 {
     padding-top: 8% !important;
   }
+  .headerclass {
+    height: 100% !important;
+  }
 }
 
 @media (min-width: 768px) {
