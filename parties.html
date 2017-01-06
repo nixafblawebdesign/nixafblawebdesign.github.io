@@ -24,6 +24,8 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+    
+    <link href="css/jquery-clockpicker.min.css" rel="stylesheet">
 
     <!-- Custom Css for pages other than home -->
     <link href="css/css2.css" rel="stylesheet">
@@ -52,6 +54,63 @@
     <script type='text/javascript' src='js/moment.min.js'></script>
     <script type='text/javascript' src='js/fullcalendar.min.js'></script>
     <script type='text/javascript' src='js/gcal.min.js'></script>
+    
+    <style type="text/css">
+.date-picker,
+.date-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.date-container {
+    padding: 0px 40px;   
+}
+
+.date-picker h2, .date-picker h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 200;
+}
+
+.date-container{
+    text-align: center;
+}
+.date-picker span.fa {
+    position: absolute;
+    cursor: pointer;
+}
+.date-picker span.fa[data-method="subtract"] {
+    left: 0px;
+}
+.date-picker span.fa[data-method="add"] {
+    right: 0px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1010px) {
+    .date-picker h2{
+        font-size: 1.5em; 
+        font-weight: 400;  
+    }    
+    .date-picker h4 {
+        font-size: 1.1em;
+    }  
+    .date-picker span.fa {
+        font-size: 3em;
+    } 
+}
+
+.timeform {padding: 0px 5px 0px 5px;}
+    </style>
 
 </head>
 
@@ -117,15 +176,17 @@
 <!-- Contact Form -->
 
 <section class="bg-primary">
-<div class="container">
-                <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
+    
+    <div class="container"><div class="row">
                           <hr class="light">
                             <h2 class="text-center">Reserve a Spot!</h2>
                           <hr class="light">
-                                </div>
+                        </div></div>
+<div class="container">
+                <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+                <div class="row">
+                    <div class="col-md-6">
+                        
                         <form name="sentMessage" id="contactForm" novalidate>
                             <div class="control-group form-group">
                                 <div class="controls">
@@ -146,24 +207,8 @@
                                     <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
                                 </div>
                             </div>
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Party Start Time:</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your party's start time." maxlength="999" style="resize:none"></textarea>
-                                </div>
-                            </div>
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Party End Time:</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your party's end time." maxlength="999" style="resize:none"></textarea>
-                                </div>
-                            </div>
-                            <div class="control-group form-group">
-                                <div class="controls">
-                                    <label>Party Date:</label>
-                                    <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter the party date." maxlength="999" style="resize:none"></textarea>
-                                </div>
-                            </div>
+                            
+                            
                             <div id="success"></div>
                             <!-- For success/fail messages -->
                             <button type="submit" class="btn btn-primary">Reserve your party!</button>
@@ -179,6 +224,36 @@
                     </div>
                     -->
                 <!-- /.row -->
+    
+    <div class="col-md-6">
+       
+            <h2>Select Date</h2>
+            <hr/>
+            <div class="date-picker"  data-date="2014-02-03">
+                <div class="date-container">
+                    <h3 class="date">
+                        <span data-toggle="datepicker" data-method="subtract" data-type="d" class="fa fa-angle-left"></span>
+                        <span class="text">17th</span>
+                        <span data-toggle="datepicker" data-method="add" data-type="d" class="fa fa-angle-right"></span>
+                    </h3>
+                    <h2 class="month">
+                        <span data-toggle="datepicker" data-method="subtract" data-type="M" class="fa fa-angle-left"></span>
+                        <span class="text">December</span>
+                        <span data-toggle="datepicker" data-method="add" data-type="M" class="fa fa-angle-right"></span>
+                    </h2>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group timeform">
+                                
+    <input id="input-a" class="form-control" value="" data-default="01:43" data-placement="top">
+    
+    </div>
+</div>
+
+        </div>
+        
     </div>
 </div>
   </section>
@@ -203,6 +278,8 @@
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+    
+    <script src="js/jquery-clockpicker.min.js"></script>
 
     <!-- Matchheight -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
@@ -243,6 +320,29 @@
           $("#scrolldown").trigger('click');
         }, 500);
       });
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+          var input = $('#input-a');
+input.clockpicker({
+    autoclose: true
+});
+
+// Manual operations
+$('#button-a').click(function(e){
+    // Have to stop propagation here
+    e.stopPropagation();
+    input.clockpicker('show')
+            .clockpicker('toggleView', 'minutes');
+});
+$('#button-b').click(function(e){
+    // Have to stop propagation here
+    e.stopPropagation();
+    input.clockpicker('show')
+            .clockpicker('toggleView', 'hours');
+});
+        });
     </script>
 
 </body>
