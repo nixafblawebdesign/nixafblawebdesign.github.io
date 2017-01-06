@@ -157,7 +157,7 @@ header {
   -o-background-size: cover;
   background-position: center;
   text-align: center;
-  color: white;
+  color: black;
   height: 100%;
 }
 header .header-content{
@@ -187,7 +187,7 @@ header .header-content .header-content-inner p {
 }
 @media (max-width: 767px) {
   header .header-content{
-top: 40%;
+    top: 40%;
   }
 }
 @media (min-width: 768px) {
@@ -442,7 +442,7 @@ body {
      display: none !important;
   }
   header .header-content .header-content-inner h1 {
-    padding-top: 8% !important;
+    padding-top: 5% !important;
   }
   .headerclass {
     height: 100% !important;
@@ -509,6 +509,21 @@ body {
 i.fa.fa-facebook-square, i.fa.fa-twitter, i.fa.fa-instagram {
     margin: 5px;
 }
+
+.transbox {
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  padding: 1%;
+  border-radius: 20px;
+}
+
+@@media (min-width: 769px) {
+  .transbox{   margin-left: 25%;
+    margin-right: 25%;}
+}
+
+.homeheading {padding-top: 6px !important;}
 
 /*Removes border on bottom of navbar*/
 .navbar{
