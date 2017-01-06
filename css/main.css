@@ -16,6 +16,10 @@ a.link.special {
     height: auto !important;
   }
 }
+/*Make Paypal logo blue*/
+i.fa.fa-paypal.fa-3x {
+    color: #003087;
+}
 /*Added padding & reduced margin*/
 section{ 
     padding-top:0px;
