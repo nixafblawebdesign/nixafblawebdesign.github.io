@@ -9,12 +9,20 @@ a.link.special {
 #plans{
     margin-top:50px;
 }
-
+/*Made button on orange slightly darker so visible*/
+button.btn.btn-inverse {
+    background-color: #D64324;
+    color: white;
+}
 /*Make heights the same*/
 @media only screen and (min-width : 767px) {
   .sameHeight {
     height: auto !important;
   }
+}
+/*Make Paypal logo blue*/
+i.fa.fa-paypal.fa-3x {
+    color: #003087;
 }
 /*Added padding & reduced margin*/
 section{ 
