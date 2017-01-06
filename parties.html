@@ -35,7 +35,6 @@
     <link media="print" href="css/fullcalendar.print.min.css" rel="stylesheet">
 
     <style>
-    #calendar {width: 900px; margin: 0 auto;}
     header{background-image: url('../img/partyroomsmall.jpg');}
     </style>
 
@@ -105,11 +104,13 @@
 
 
     <section style="padding-top: 50px !important;">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
               <div id="calendar"></div>
             </div>
+            <div class="col-sm-2"></div>
           </div>
         </div>
     </section>
@@ -122,7 +123,7 @@
                     <div class="col-md-12">
                         <div class="row">
                           <hr class="light">
-                            <h2 class="text-center">Testimonials</h2>
+                            <h2 class="text-center">Reserve a Spot!</h2>
                           <hr class="light">
                                 </div>
                         <form name="sentMessage" id="contactForm" novalidate>
@@ -218,7 +219,7 @@
           header: {
     				left: 'prev,next today',
     				center: 'title',
-    				right: 'month,agendaWeek,agendaDay'
+    				right: 'agendaWeek,agendaDay'
     			},
     			defaultView: 'agendaWeek',
     			editable: true,
@@ -227,11 +228,11 @@
             googleCalendarId: 'uu352qak2tcqa5fhf268g26a68@group.calendar.google.com'
           }
       });
-      //if($(window).width() <= 768){
-      //  $('#calendar').fullCalendar('changeView','agendaDay');
-      //} else {
-      //  $('#calendar').fullCalendar('changeView','agendaWeek');
-      //}
+      if($(window).width() <= 768){
+        $('#calendar').fullCalendar('changeView','agendaDay');
+      } else {
+        $('#calendar').fullCalendar('changeView','agendaWeek');
+      }
     });
     </script>
 
