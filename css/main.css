@@ -6,6 +6,9 @@ a.link.special {
     color: white;
     text-decoration: none;
 }
+.plans{
+    margin-top:50px;
+}
 
 /*Make heights the same*/
 @media only screen and (min-width : 767px) {
