@@ -166,7 +166,6 @@ header .header-content{
   width: auto;
   position: absolute;
   top: 30%;
-  bottom: 10%;
   left: 10%;
   right: 10%;
 }
@@ -185,6 +184,11 @@ header .header-content .header-content-inner p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   margin-bottom: 50px;
+}
+@media (max-width: 767px) {
+  header .header-content{
+top: 40%;
+  }
 }
 @media (min-width: 768px) {
   header {
